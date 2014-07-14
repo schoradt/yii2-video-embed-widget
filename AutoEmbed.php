@@ -25,10 +25,12 @@ class AutoEmbed extends \yii\base\Widget
 
 	    // look up data on url
 	    $data = \Embed\Embed::create($this->url);
-
+		
+		// make sure we received a video embed code
 	    if (!is_object($data) || is_null($data->code))
 	    	return "Embed code could not be generated for this URL ({$this->url})";
-
+		
+		// return the video embed code
         return $data->code;
     }
 }
