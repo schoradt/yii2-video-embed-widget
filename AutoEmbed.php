@@ -13,12 +13,13 @@ use yii\helpers\Html;
 class AutoEmbed extends \yii\base\Widget
 {
 	public $url;
+	public $return_type;
 
     public function run()
     {
     	// make sure a source url was provided
 		if ($this->url === null)
-			return 'Please pass a URL parameter into the widget';
+			return $return_type == 'boolean' ? false : 'Please pass a URL parameter to scan for a video.';
 
 	    // include embed class
 		include_once(__DIR__ . '/../../../vendor/embed/embed/Embed/autoloader.php');
@@ -28,7 +29,7 @@ class AutoEmbed extends \yii\base\Widget
 		
 		// make sure we received a video embed code
 	    if (!is_object($data) || is_null($data->code))
-	    	return "Embed code could not be generated for this URL ({$this->url})";
+			return $return_type == 'boolean' ? false : "Embed code could not be generated for this URL ({$this->url})";
 		
 		// return the video embed code
         return $data->code;
