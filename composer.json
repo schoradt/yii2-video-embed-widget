@@ -2,7 +2,7 @@
 	"name": "cics/yii2-video-embed-widget",
 	"description": "Yii2 Extension for Generating Video Embed Codes from Video URLs",
 	"type": "yii2-extension",
-	"keywords": "["yii2","extension","widget","video","embed"]",
+	"keywords": ["yii2","extension","widget","video","embed"],
 	"license": "MIT",
 	"authors": [
 		{
