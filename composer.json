@@ -10,6 +10,9 @@
 			"email": "caleb@cicsolutions.com"
 		}
 	],
+	"require": {
+		"embed/embed": "dev-master",
+	},
 	"autoload": {
 		"psr-4": {
 			"cics\\widgets\\": ""
