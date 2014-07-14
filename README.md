@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist cics/yii2-video-embed-widget "dev-master"
+php composer.phar require cics/yii2-video-embed-widget "dev-master"
 ```
 
 or add
