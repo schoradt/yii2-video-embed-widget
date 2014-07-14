@@ -28,4 +28,5 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \cics\widgets\AutoloadExample::widget(); ?>```
+<?= \cics\widgets\AutoloadExample::widget(); ?>
+```
