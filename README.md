@@ -1,4 +1,4 @@
-cics/yii2-video-embed
+Yii2 Video Embed Widget
 =====================
 Yii2 Extension for Generating Video Embed Codes from Video URLs
 
