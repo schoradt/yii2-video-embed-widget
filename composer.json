@@ -11,7 +11,7 @@
 		}
 	],
 	"require": {
-		"embed/embed": "dev-master",
+		"embed/embed": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
