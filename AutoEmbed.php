@@ -2,7 +2,7 @@
 
 namespace cics\widgets;
 
-class AutoloadExample extends \yii\base\Widget
+class AutoEmbed extends \yii\base\Widget
 {
 	public function init()
 	{
