@@ -36,22 +36,22 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by
+Once the extension is installed, simply use it in your code by adding
 
 ```php
-<?= \cics\widgets\AutoEmbed::widget(['url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ', 'show_errors' => true]); ?>
+<?= \cics\widgets\VideoEmbed::widget(['url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ', 'show_errors' => true]); ?>
 ```
 
 or add the namespace first and only reference the class name when echoing the returned embed code
 
 ```php
 use cics\widgets\AutoEmbed;
-
-<?= AutoEmbed::widget(['url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ']); ?>
+...
+<?= VideoEmbed::widget(['url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ']); ?>
 ```
 
 ### Responsiveness
-Responsive video display is enabled by default.  But to display the video responsively on your page, you'll need to add the following CSS rules to your stylesheet:
+Responsive video display is enabled by default, but to display the video responsively on your page, you'll need to add the following CSS rules to your stylesheet:
 ```css
 .video-container {
     position: relative;
@@ -69,7 +69,7 @@ Responsive video display is enabled by default.  But to display the video respon
     height: 100%;
 }
 ```
-> NOTE: If you don't want the video to display responsively, you can disable responsive display by setting the "responsive" parameter to false.
+> NOTE: If you don't want the video to display responsively, you can disable responsive display by setting the "responsive" parameter to false, or by simply not including the above CSS in your stylesheet.
 ```php
-<?= AutoEmbed::widget(['url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ', 'responsive' => false]); ?>
+<?= VideoEmbed::widget(['responsive' => false, 'url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ']); ?>
 ```
