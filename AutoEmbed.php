@@ -12,8 +12,11 @@ use yii\helpers\Html;
 
 class AutoEmbed extends \yii\base\Widget
 {
-	public $url;
-	public $show_errors = false;
+	public $url				= null;
+	public $show_errors 	= false;
+	public $responsive 		= true;
+	public $container_id	= '';
+	public $container_class = '';
 
     public function run()
     {
@@ -30,6 +33,10 @@ class AutoEmbed extends \yii\base\Widget
 		// make sure we received a video embed code
 	    if (!is_object($data) || is_null($data->code))
 			return $this->show_errors ? "Embed code could not be generated for this URL ({$this->url})" : false;
+		
+		// build the video container with custom id and class if desired
+		if ($this->responsive || !empty($this->container_id) || !empty($this->container_class))
+			$data->code = '<div id="' . $this->container_id . '" class="video-container ' . $this->container_class . '">' . $data->code . '</div>';
 		
 		// return the video embed code
         return $data->code;
