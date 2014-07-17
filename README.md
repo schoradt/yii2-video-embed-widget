@@ -28,5 +28,5 @@ Usage
 Once the extension is installed, simply use it in your code by:
 
 ```php
-<?= \cics\widgets\AutoEmbed::widget(['url'] => 'http://url-to-video-host?v=videoid'); ?>
+<?= \cics\widgets\AutoEmbed::widget(['url' => 'http://url-to-video-host?v=videoid']); ?>
 ```
