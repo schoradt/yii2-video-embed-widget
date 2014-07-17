@@ -34,9 +34,11 @@ class AutoEmbed extends \yii\base\Widget
 	    if (!is_object($data) || is_null($data->code))
 			return $this->show_errors ? "Embed code could not be generated for this URL ({$this->url})" : false;
 		
-		// build the video container with custom id and class if desired
-		if ($this->responsive || !empty($this->container_id) || !empty($this->container_class))
-			$data->code = '<div id="' . $this->container_id . '" class="video-container ' . $this->container_class . '">' . $data->code . '</div>';
+		// build the video container with custom id and class if desired - also set responsiveness (video-container)
+		if ($this->responsive || !empty($this->container_id) || !empty($this->container_class)) {
+			$responsive = $this->responsive ? 'video-container ' : '';			
+			$data->code = '<div id="' . $this->container_id . '" class="' . $responsive . $this->container_class . '">' . $data->code . '</div>';
+		}
 		
 		// return the video embed code
         return $data->code;
