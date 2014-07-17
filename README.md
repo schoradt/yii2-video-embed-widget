@@ -73,3 +73,13 @@ Responsive video display is enabled by default, but to display the video respons
 ```php
 <?= VideoEmbed::widget(['responsive' => false, 'url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ']); ?>
 ```
+
+### Custom Container ID and Class Settings
+You can set a custom container ID or custom container classes by passing the respective parameters.
+```php
+<?= VideoEmbed::widget([
+		'url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ',
+		'container_id' => 'yourCustomId',
+		'container_class' => 'your-custom-class a-second-custom-class',
+	]); ?>
+```
