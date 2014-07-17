@@ -28,5 +28,5 @@ Usage
 Once the extension is installed, simply use it in your code by:
 
 ```php
-<?= \cics\widgets\AutoEmbed::widget(['url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ']); ?>
+<?= \cics\widgets\AutoEmbed::widget(['url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ', 'show_errors' => true]); ?>
 ```
