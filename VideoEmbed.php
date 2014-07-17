@@ -10,7 +10,7 @@ namespace cics\widgets;
 
 use yii\helpers\Html;
 
-class AutoEmbed extends \yii\base\Widget
+class VideoEmbed extends \yii\base\Widget
 {
 	public $url				= null;
 	public $show_errors 	= false;
