@@ -30,11 +30,11 @@ class VideoEmbed extends \yii\base\Widget
 	    // look up data for the supplied url
 	    $data = \Embed\Embed::create($this->url);
 		
-		// make sure we received a video embed code
+		// make sure we received a video embed code from the lookup
 	    if (!is_object($data) || is_null($data->code))
 			return $this->show_errors ? "Embed code could not be generated for this URL ({$this->url})" : false;
 		
-		// build the video container with custom id and class if desired - also set responsiveness (video-container)
+		// build the video container with custom id and class if desired - also set responsiveness class (video-container) if desired
 		if ($this->responsive || !empty($this->container_id) || !empty($this->container_class)) {
 			$responsive = $this->responsive ? 'video-container ' : '';			
 			$data->code = '<div id="' . $this->container_id . '" class="' . $responsive . $this->container_class . '">' . $data->code . '</div>';
