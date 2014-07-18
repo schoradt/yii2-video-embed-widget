@@ -45,7 +45,7 @@ Once the extension is installed, simply use it in your code by adding
 or add the namespace first and only reference the class name when echoing the returned embed code
 
 ```php
-use cics\widgets\AutoEmbed;
+use cics\widgets\VideoEmbed;
 ...
 <?= VideoEmbed::widget(['url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ']); ?>
 ```
