@@ -5,7 +5,7 @@ Yii2 Extension for Generating Video Embed Codes from Video URLs.
 This widget will return the video embed code when passed a valid video url. It's compatible with any web service, such as youtube, vimeo, dailymotion, hulu, etc.
 
 This widget accepts the following parameters:
-- `url`: 				this param is required
+- `url`: 				** required **
 - `show_errors`: 		defaults to `false`
 - `resonsive`: 			defaults to `true`
 - `container_id`: 		defaults to `''` empty string
