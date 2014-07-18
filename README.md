@@ -50,6 +50,7 @@ use cics\widgets\VideoEmbed;
 <?= VideoEmbed::widget(['url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ']); ?>
 ```
 
+
 ### Responsiveness
 Responsive video display is enabled by default, but to display the video responsively on your page, you'll need to add the following CSS rules to your stylesheet:
 ```css
@@ -69,10 +70,11 @@ Responsive video display is enabled by default, but to display the video respons
     height: 100%;
 }
 ```
-> NOTE: If you don't want the video to display responsively, you can disable responsive display by setting the "responsive" parameter to false, or by simply not including the above CSS in your stylesheet.
+> NOTE: If you don't want the video to display responsively, you can disable responsive display by setting the `responsive` parameter to `false`, or by simply not including the above CSS in your stylesheet.
 ```php
 <?= VideoEmbed::widget(['responsive' => false, 'url' => 'http://www.youtube.com/watch?v=NMjA5N7kbEQ']); ?>
 ```
+
 
 ### Custom Container ID and Class Settings
 You can set a custom container ID or custom container classes by passing the respective parameters.
