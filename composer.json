@@ -15,7 +15,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"cics\\widgets\\VideoEmbed\\": ""
+			"cics\\widget\\": ""
 		}
 	}
 }
