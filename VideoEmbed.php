@@ -45,8 +45,8 @@ class VideoEmbed extends \yii\base\Widget
 		$video_embed .= $data->code;
 
 		// close the containers
-		$video_embed .= $custom_container ? '</div>' : '';
 		$video_embed .= $this->responsive ? '</div>' : '';
+		$video_embed .= $custom_container ? '</div>' : '';
 
 		// return the video embed code
         return $video_embed;
