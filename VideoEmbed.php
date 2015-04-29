@@ -12,9 +12,9 @@ use yii\helpers\Html;
 
 class VideoEmbed extends \yii\base\Widget
 {
-	public $url				= null;
+	public $url		= null;
 	public $show_errors 	= false;
-	public $responsive 		= true;
+	public $responsive 	= true;
 	public $container_id	= '';
 	public $container_class = '';
 
@@ -25,7 +25,7 @@ class VideoEmbed extends \yii\base\Widget
 		return $this->show_errors ? 'Please pass a URL parameter to scan for a video to embed.' : false;
 
     	// include embed class
-	include_once('@vendor/embed/embed/src/autoloader.php');
+	include_once(__DIR__ . '/../../../vendor/embed/embed/src/autoloader.php');
 
     	// look up data for the supplied url
     	$data = \Embed\Embed::create($this->url);
