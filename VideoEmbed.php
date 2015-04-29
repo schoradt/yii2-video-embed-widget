@@ -21,34 +21,34 @@ class VideoEmbed extends \yii\base\Widget
     public function run()
     {
     	// make sure a source url was provided
-		if (is_null($this->url) || empty($this->url))
-			return $this->show_errors ? 'Please pass a URL parameter to scan for a video to embed.' : false;
+	if (is_null($this->url) || empty($this->url))
+		return $this->show_errors ? 'Please pass a URL parameter to scan for a video to embed.' : false;
 
-	    // include embed class
-		include_once('@vendor/embed/embed/Embed/autoloader.php');
+    	// include embed class
+	include_once('@vendor/embed/embed/src/autoloader.php');
 
-	    // look up data for the supplied url
-	    $data = \Embed\Embed::create($this->url);
+    	// look up data for the supplied url
+    	$data = \Embed\Embed::create($this->url);
 
-		// make sure we received a video embed code from the lookup
-	    if (!is_object($data) || is_null($data->code))
-			return $this->show_errors ? "Embed code could not be generated for this URL ({$this->url})" : false;
+	// make sure we received a video embed code from the lookup
+    	if (!is_object($data) || is_null($data->code))
+		return $this->show_errors ? "Embed code could not be generated for this URL ({$this->url})" : false;
 
-		// build the video container with custom id and class if desired
-		$custom_container = !empty($this->container_id) || !empty($this->container_class);
-		$video_embed = $custom_container ? '<div id="' . $this->container_id . '" class="' . $this->container_class . '">' : '';
+	// build the video container with custom id and class if desired
+	$custom_container = !empty($this->container_id) || !empty($this->container_class);
+	$video_embed = $custom_container ? '<div id="' . $this->container_id . '" class="' . $this->container_class . '">' : '';
 
-		// also set responsiveness class (video-container) if desired
-		$video_embed .= $this->responsive ? '<div class="video-container">' : '';
+	// also set responsiveness class (video-container) if desired
+	$video_embed .= $this->responsive ? '<div class="video-container">' : '';
 
-		// insert the embed code
-		$video_embed .= $data->code;
+	// insert the embed code
+	$video_embed .= $data->code;
 
-		// close the containers
-		$video_embed .= $this->responsive ? '</div>' : '';
-		$video_embed .= $custom_container ? '</div>' : '';
+	// close the containers
+	$video_embed .= $this->responsive ? '</div>' : '';
+	$video_embed .= $custom_container ? '</div>' : '';
 
-		// return the video embed code
+	// return the video embed code
         return $video_embed;
     }
 }
