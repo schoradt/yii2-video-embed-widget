@@ -25,7 +25,7 @@ class VideoEmbed extends \yii\base\Widget
 			return $this->show_errors ? 'Please pass a URL parameter to scan for a video to embed.' : false;
 
 	    // include embed class
-		include_once(__DIR__ . '/../../../vendor/embed/embed/Embed/autoloader.php');
+		include_once('@vendor/embed/embed/Embed/autoloader.php');
 
 	    // look up data for the supplied url
 	    $data = \Embed\Embed::create($this->url);
